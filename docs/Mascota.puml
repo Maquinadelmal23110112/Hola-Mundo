@@ -22,7 +22,9 @@ class Foco
 class Sueño 
 class Baño
 
-
+package Mascota{
+class Mascota
+}
 Alimento --o Mascota
 Mascota o-- Juguete
 Carne --|> Alimento
