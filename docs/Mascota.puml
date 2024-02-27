@@ -1,0 +1,52 @@
+@startuml 
+
+class Mascota
+class Alimento 
+class Carne
+class Juguete
+class Pelota
+class Carro
+class Stamina
+class Jabon
+class Agua
+class Lampara
+class Dia 
+class Noche 
+class Puntuacion
+class Moneda 
+class Tristeza
+class Felicidad
+class Desagrado
+class Emocion 
+class Foco 
+class Sueño 
+class Baño
+
+
+Alimento --o Mascota
+Mascota o-- Juguete
+Carne --|> Alimento
+Pelota --|> Juguete
+Lampara --* Foco
+Felicidad --|> Emocion 
+Tristeza --|> Emocion
+Desagrado --|> Emocion
+Mascota *-- Emocion 
+Mascota *-- Sueño 
+Sueño --|> Noche 
+Noche o-- Lampara 
+Puntuacion --|> Moneda 
+Juguete --|> Felicidad
+Dia --* Juguete
+Jabon --o Agua 
+Carro *-- Puntuacion
+Mascota o-- Carro
+Sueño --|> Stamina
+Baño *-- Agua
+Stamina *-- Baño
+
+
+
+
+
+@endluml
