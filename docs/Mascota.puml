@@ -23,30 +23,35 @@ class Sueño
 class Baño
 
 package Mascota{
-class Mascota
-}
-Alimento --o Mascota
-Mascota o-- Juguete
-Carne --|> Alimento
-Pelota --|> Juguete
-Lampara --* Foco
-Felicidad --|> Emocion 
-Tristeza --|> Emocion
-Desagrado --|> Emocion
-Mascota *-- Emocion 
-Mascota *-- Sueño 
-Sueño --|> Noche 
-Noche o-- Lampara 
-Puntuacion --|> Moneda 
-Juguete --|> Felicidad
-Dia --* Juguete
-Jabon --o Agua 
-Carro *-- Puntuacion
-Mascota o-- Carro
-Sueño --|> Stamina
-Baño *-- Agua
-Stamina *-- Baño
 
+}
+Alimento "*" --o "1" Mascota
+Mascota "1" o-- "3" Juguete
+Carne "1" --|> "1.." Alimento
+Pelota "1" --|> "1" Juguete
+Lampara "1" --* "1" Foco
+
+Felicidad "1" --|> "*" Emocion 
+Tristeza "1" --|> "*" Emocion
+Desagrado "1" --|> "*" Emocion
+Mascota "1" *-- "*" Emocion 
+
+Mascota "1" *-- "1" Sueño 
+
+Sueño "1" --|> "1" Noche 
+Noche "1" o-- "1" Lampara 
+Puntuacion "1" --|> "1.." Moneda 
+Juguete "1" --|> "*" Felicidad
+Dia "1" --* "1" Juguete
+
+Jabon "1" --o "1" Agua 
+Carro "1" *-- "*" Puntuacion
+
+Mascota "1" o-- "1" Carro
+Sueño "1" --|> "1" Stamina
+Baño "1" *-- "1" Agua
+
+Stamina "1" *-- "1" Baño
 
 
 
